@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo - Ferromarket</title>
+    <link rel="icon" href="/img/ferromarket.png" type="image/png">
+    <link rel="stylesheet" href="css/css-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="contenido-bienvenida">
+        <img src="/img/fondo-bienvenida.png" alt="Fondo de bienvenida" class="fondo-bienvenida">
+        <h1 class="titulo-bienvenida">Bienvenido al catálogo de <strong class="texto-negrita-bienvenida">Ferromarket</strong></h1>
+    </div>
+
+    <div class="contenedor-quienes-somos">
+        <div class="logo-central-quienes-somos">
+            <img src="/img/ferromarket.png" alt="Logo de Ferromarket" class="logo-quienes-somos">
+        </div>
+        <div class="contenido-texto-quienes-somos">
+            <h2>FERROMARKET</h2>
+            <h3>Todo lo que necesitas para tu proyecto está en Ferromarket. Calidad garantizada y los mejores precios para equipar tu taller.</h3>
+        </div>
+        <div class="horarios-atencion">
+            <h3>Horarios de atención</h3>
+            <p><i class="fa fa-clock-o icono-reloj" ></i> Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+            <p><i class="fa fa-clock-o icono-reloj" ></i> Sábado: 9:00 AM - 2:00 PM</p>
+            <p><i class="fa fa-clock-o icono-reloj-cerrado" ></i> Domingo: <a class="negrita-cerrado-horario">Cerrado</a></p>
+        </div>
+        
+    </div>
+
+    <nav class="barra-navegacion">
+        <a href="index.html" class="contenedor-logo"> <img src="/img/ferromarket.png" alt="Logo de Ferromarket" class="logo-barra-navegacion"></a>
+        <!-- <a href="#" class="activado">Inicio</a> -->
+        <div class="contenedor-filtros">
+            <a href="#"  class="filtros btn active" data-categoria="todos">Todos los productos</a>
+            <a href="#" class="filtros btn" data-categoria="1">Producto1</a>
+            <a href="#" class="filtros btn" data-categoria="2">Producto2</a>
+            <a href="#" class="filtros btn" data-categoria="3">Producto3</a>
+            <a href="#" class="filtros btn" data-categoria="4">Producto4</a>
+            <a href="#" class="filtros btn" data-categoria="5">Producto5</a>
+            <a href="#" class="filtros btn" data-categoria="6">Producto6</a>
+            <a href="#" class="filtros btn" data-categoria="7">Producto7</a>
+            <a href="#" class="filtros btn" data-categoria="8">Producto8</a>
+            <a href="#" class="filtros btn" data-categoria="9">Producto9</a>
+            <a href="#" class="filtros btn" data-categoria="10">Producto10</a>
+        </div>
+        <!-- <a href="javascript:void(0);" class="icono" onclick="funcion()"><i class="fa fa-bars"></i></a> -->
+    </nav>
+
+            <template id="plantilla-producto">
+                <div class="tarjeta-producto filtro-producto" data-idx="">
+                    <img src="" alt="" class="imagen-producto">
+                    <h3></h3>
+                    <p class="descripcion-producto"></p>
+                    <p class="precio-producto"></p>
+                    <p class="cantidad-producto"></p>
+                </div>
+            </template>
+            <template id="plantilla-modal-producto">
+        <div class="modal" id="modal">
+            <div class="contenido-modal modal-producto-avanzado">
+            <span class="cerrar-modal">&times;</span>
+            <div class="modal-producto-flex">
+                <div class="modal-producto-imagenes">
+                <img class="modal-img-principal" src="" alt="">
+                <!-- Aquí podrías agregar miniaturas o flechas para slider si lo deseas -->
+                </div>
+                <div class="modal-producto-info">
+                <h2 class="modal-titulo"></h2>
+                <p class="modal-descripcion-corta"></p>
+                <button class="modal-ver-mas">Ver descripción completa</button>
+                <div class="modal-precio"></div>
+                <div class="modal-cantidad-carrito">
+                    <button class="modal-cantidad-menos">-</button>
+                    <input type="number" class="modal-cantidad-input" value="1" min="1">
+                    <button class="modal-cantidad-mas">+</button>
+                    <button class="modal-agregar-carrito"><i class="fa fa-shopping-cart"></i> Agregar al carrito</button>
+                </div>
+                <button class="modal-calificar"><i class="fa fa-star"></i> Calificar producto</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </template>
+
+
+    <div id="modal-container"></div>
+    <div class="contenido-tarjeta-productos" id="contenedor-productos"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

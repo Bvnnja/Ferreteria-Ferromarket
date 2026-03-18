@@ -1,0 +1,351 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* tipo de letra para toda la pagina */
+}
+
+.contenido-bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fondo-bienvenida{ /* imagen del fondo */
+    background-repeat: no-repeat; /* funcion para que no se repita la imagen  */
+    filter: brightness(55%);  /* aplicamos un filtro de brillo para oscuercer la imagen y hacer que el texto sea más legible  */
+    width: 100%;/* usamos el 100% del ancho de la imagen en la pantalla */
+    position: absolute;/* le damos una posicion absolute para que se encuentre debajo de los elementos */
+    z-index: -1; /* le damos un indice de profundida para que se muentren lo que es el texto de bienvenida */
+    bottom: 29%;/* utilizamos el espacio disponible para que la imagen no pase para el navbar */
+}
+.titulo-bienvenida{/* titulo completo de bienvenida */
+    font-size: 2em; /* tamaño del título */
+    margin: 4%; /* margen para separar el titulo de los bordes izquieda/derecha/arriba/abajo */
+    color: rgb(0, 0, 0); /* color del texto "bienvenido al catalogo de" */
+    background-color: #ffffff; /* color del fondo de la tarjeta en el titulo */
+    border-radius: 20px; /* le damos un borde a las esquinas para mayor estetica */
+    padding: 40px; /* espacio entre el texto y los bordes de la tarjeta */
+    border: 2px solid #000000; /* borde alrededor de la tarjeta junto con el color  */
+    box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.7); /* sombra alrededor de la tarjeta */
+}
+.texto-negrita-bienvenida{
+    font-weight: bold; /* hacemos que el texto "ferromarket" sea en negrita para que resalte mas */
+    color: green; /* le damos un color al texto "ferromarket" */
+}
+
+
+.contenedor-quienes-somos{
+    display: flex; /* utilizamos flexbox para organizar el contenido */
+    flex-direction: column; /* organizamos el contenido en una columna */
+    margin-top: 50px; /* espaciado de arriba  */
+    margin-left: 170px; /* espaciado de la izquierda */
+    margin-right: 170px; /* espaciado de la derecha  */
+    margin-bottom: 10px; /* espaciado de abajo */
+    border-radius: 20px; /* le damos un borde a las esquina para mayor estetica */
+    background: rgb(255, 255, 255);
+    border: 2px solid #000000; /* borde alrededor del texto junto con el color  */
+}
+
+.logo-central-quienes-somos{
+    display: flex; /* utilizamos flexbox para organizar el contenido */
+    justify-content: center; /* centramos el contenido horizontalmente */
+    height: 15vh; /* tamaño del logo */
+    margin-top: -90px; /* espaciado de arriba */
+    background: rgb(255, 255, 255); /* color del fondo del logo ferromarket */
+    margin-left: 50%; /* espaciado a la izquierda */
+    transform: translateX(-50%); /* movemos el logo en el eje x para la izquieda */
+    border-radius: 50px; /* le damos un borde redondo al fondo */
+    border: 2px solid transparent ; /* colocamos el borde transparante */ 
+    background-image: linear-gradient(white, white),/* Fondo interno blanco */linear-gradient(to bottom, black 61%, white 50%); /* El borde (negro arriba, blanco abajo) */
+    background-origin: border-box; 
+    background-clip: padding-box, border-box;
+
+}
+.contenido-texto-quienes-somos{
+    display: flex; /* utilizamos flexbox para organizar el contenido */
+    flex-direction: column; /* organizamos el contenido en una columna */
+    align-items: start; /* centramos el contenido horizontalmente */
+}
+.contenido-texto-quienes-somos h2{
+    font-size: 2em; /* tamaño del subtitulo "Ferromarket" */
+    margin-left: 40px; /* espaciado de la izquierda en el texto "ferromarket" */
+    color: green; /* color del texot ferromarket */
+    -webkit-text-stroke: 0.001em #000000; /* borde del texto */
+}
+.contenido-texto-quienes-somos h3{
+    font-size: 1.25em; /* tamaño del subtitulo "Ferromarket" */
+    margin-left: 40px;/* margen a la izquieda en el texto "todo lo que necesitas..." */
+    margin-top: -13px;/* margen superior en el texto "todo lo que necesitas..." */
+    color: rgb(0, 0, 0); /* color del texto "todo lo que necesitas..." */
+}
+.horarios-atencion{
+    align-items: start; /* colocamos el texto de los horarios alineado a al inicio osea izquierda */
+    margin-left: 40px; /* margen a la izquierda del texto "horarios de atención" */
+    margin-top: -25px; /* le quitamos margen al contenedor d elos horairos para que se encuentre mas arriba */
+}
+.horarios-atencion h3{
+    font-size: 2em; /* tamaño del subtitulo "horarios de atención" */
+    color: rgb(238, 255, 0); /* color del texto "horarios de atención" */
+    -webkit-text-stroke: 0.001em #000000; /* borde del texto */
+    margin-top: 20px; /* espaciado de horarios de atencion */
+    margin-bottom: 15px; /* espaciado de abajo de atencion */
+}
+.icono-reloj{
+    font-size: 20px; /* tamaño del icono del reloj */
+    margin-right: 10px; /* margen a la derecha del icono del reloj */
+    color: green; /* le damos un color al reloj */
+}
+.icono-reloj-cerrado{
+    font-size: 20px; /* tamaño del icono del reloj */
+    margin-right: 10px; /* margen a la derecha del icono del reloj */
+    color: rgb(255, 0, 0); /* le damos un color al reloj */  
+}
+.negrita-cerrado-horario{
+    font-size: 20px; /* tamano del texto "cerrado" */
+    font-weight: bold; /* hacemos que el texto "cerrado" sea en negrita para que resalte mas */
+    color: rgb(255, 0, 0); /* le damos un color al texto "cerrado" */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* cambiamos la tipografía del texto "cerrado" */
+}
+
+
+
+
+
+.barra-navegacion{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.barra-navegacion a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.logo-barra-navegacion{
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contenedor-filtros{
+    margin-top: 15px; 
+}
+.filtros{
+    background-color: green;
+    border-radius: 20px ;
+    border: 1px solid #000000;
+    margin-left: 10px;
+}
+
+
+.contenido-tarjeta-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.tarjeta-producto{
+    width: 200px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.tarjeta-producto img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.precio-producto{
+    font-size: 1.5em;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+.contenido-modal {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+}
+
+.contenido-modal-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.imagen-modal-producto {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* --- MODAL PRODUCTO AVANZADO --- */
+.modal-producto-avanzado {
+background: #fff;
+    border-radius: 20px;
+    padding: 83px 20px;
+    max-width: 45%;
+    margin-top: 170px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+.modal-producto-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.modal-producto-imagenes {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-img-principal {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin-bottom: 10px;
+}
+.modal-producto-info {
+  flex: 2 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #222;
+}
+.modal-descripcion-corta {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+.modal-ver-mas {
+  background: #eee;
+  border: none;
+  color: #333;
+  border-radius: 8px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+.modal-precio {
+  font-size: 2rem;
+  color: green;
+  font-weight: bold;
+  margin: 10px 0 16px 0;
+}
+.modal-cantidad-carrito {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.modal-cantidad-menos, .modal-cantidad-mas {
+  background: #eee;
+  border: none;
+  font-size: 1.3rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modal-cantidad-menos:hover, .modal-cantidad-mas:hover {
+  background: #d4d4d4;
+}
+.modal-cantidad-input {
+  width: 48px;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+.modal-agregar-carrito {
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+    border:1px solid #000000;
+}
+.modal-agregar-carrito:hover {
+  background: yellow;
+  color: #000000;
+  border:1px solid #000000;
+}
+.modal-calificar {
+    background: #fff;
+    color: green;
+    border: 1.5px solid green;
+    border-radius: 8px;
+    padding: 7px 16px;
+    width: 41%;
+    font-size: 1rem;
+    font-weight: bold;
+    /* left: 10%; */
+    cursor: pointer;
+    margin-top: 8px;
+    display: flex;
+    margin-left: 15%;
+    gap: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.modal-calificar:hover {
+  background: yellow;
+  color: #000;
+  border:1px solid #000;
+}
+.cerrar-modal {
+    position: absolute;
+    top: 19%;
+    left: 71%;
+    font-size: 2.2rem;
+    color: #888;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+.cerrar-modal:hover {
+  color: green;
+}
